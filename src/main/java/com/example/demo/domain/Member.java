@@ -12,16 +12,18 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @Entity
-@Table(name = "hello")
-public class Hello {
+@Table(name = "member")
+public class Member {
 	@Id @GeneratedValue
 	private Long id;
 	private String name;
-	private String msg;
+	private String address;
+	private int age;
 	
 	@Builder
-	public Hello(String name, String msg) {
+	public Member(String name, String address, int age) {
 		this.name = name;
-		this.msg = msg;
+		this.address = address;
+		this.age = age;
 	}
 }
