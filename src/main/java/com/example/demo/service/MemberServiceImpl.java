@@ -19,4 +19,23 @@ public class MemberServiceImpl implements MemberService {
 		return member.getId();
 	}
 
+	@Override
+	public Member get(Long id) {
+		Member member = memberRepository.findById(id).get();
+		
+		return member;
+	}
+
+	@Override
+	public void update(Member member) {
+		// TODO 문제1
+		
+	}
+
+	@Override
+	public void delete(Long id) {
+		// TODO 문제2
+		
+	}
+
 }
