@@ -29,13 +29,14 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public void update(Member member) {
 		// TODO 문제1
+		memberRepository.save(member);
 		
 	}
 
 	@Override
 	public void delete(Long id) {
 		// TODO 문제2
-		
+		memberRepository.deleteById(id);
 	}
 
 }
